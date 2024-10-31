@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* { /* asterísco serve para fazer aplicação em tudo */
+font-family: "Poppins", sans-serif;
+margin: 0; /* seria um espaçamento externo*/
+padding: 0; /* seria um espaçamento interno*/
+box-sizing: border-box; /* calcula a distancia dos itens*/
+}
+
+html{
+    scroll-snap-type: y mandatory;
+}
+video, .img-tesla {
+
+    width: 100%;  /* largura do video */
+    height: 100%; /* altura do video */
+    position: absolute; /* posicionar o item em uma posição exata que eu desejar */
+    top: 0; /* como informei position, tenho que informa a posição, usando top */
+    left: 0; /* ficara 0 a esquerda*/
+    z-index: -1; /* defina quem vai ficar atras de quem */
+    object-fit: cover; /* seria como que o video se encaxe na tela // cover é cobrir, no casa cobrir toda a tela. */
+    filter: brightness(60%);
+}
+
+.logo { /* para chamar o apelido */
+    filter: brightness(100); /* cor da logo*/
+    position: fixed; /* irá fixar a logo no topo da imagem*/
+    width: 120px; /* px seria uma unidade de medido, com cm,mm e entre outros */
+}
+
+.item {
+    position: relative;
+    width: 100vw; /* seria a tela toda - ALTURA */
+    height: 100vh; /* seria a tela toda - LATGURA */
+display: flex; /* habilita algumas propriedades css */
+justify-content: space-between; /* define a posição de cada item // space cria espaço entre os itens */
+flex-direction:column ; /* direção dos itens// Column deixa o item em baixo do outro */
+scroll-snap-align: start;
+}
+
+h1 {
+    color: white;
+    font-size: 50px; /* tamanho do texto*/
+}
+.sub-titulo {
+    color: white;
+}
+
+.info-carro {
+margin-top: 80px;
+text-align: center; /* colocar a posição do item ou seja, colocou o item no centro*/
+}
+
+.rodape {
+text-align: center;
+}
+
+button {
+    background-color: rgb(34,34,34, 0.8);
+    color: white;
+    padding: 7px 80px; /* 7px aplica em cima e em baixo e 80px  aplica do lado esquerdo e direito*/
+    border-radius: 5px; /* arrendonda a borda do botão*/
+    border: none; /* none é nada // tira a borda do botão */
+    cursor: pointer;/* coloca a mãosinha no lugar do mouse*/
+}
+
+.test-drive{
+    color: black;
+    background: white;
+}
+
+.texto-rodape {
+    color: white;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.x {
+    color: black;
+}
+
+.sub-titulo2{
+   
+    font-weight: bold;
+}
+
+.formulario {
+    position: fixed;
+    top: 40px;
+    width: 600px;
+    height: 100%;
+    z-index: 3;
+    left: -50%;
+    transition: 1.5s; /* entre o abrir e fechar o formulario*/
+}
